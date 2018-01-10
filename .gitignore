@@ -99,3 +99,10 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# vscode
+.vscode
+
+# files
+block.json
+db.json
