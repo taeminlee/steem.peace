@@ -16,7 +16,7 @@ def run_server():
     async def data(ctx: HTTPRequestContext):
         with open('db.json', 'r') as db:
             R = json.load(db)
-            output = {"data" : list(map(lambda r:["<a href='%s' target='_blank'>%s</a>" % ("https://steemit.com/@%s/%s" % (r['author'], r['permlink']), r['title']), r['timestamp'], "<a href='https://steemit.com/@%s' target='_blank'>%s</a>" % (r['voter'],r['voter']), "<a href='https://steemit.com/@%s' target='_blank'>%s</a>" % (r['author'],r['author']), int(r['weight'])/100],R['_default'].values()))}
+            output = {"data" : list(map(lambda r:["<a href='%s' target='_blank'># %s</a>" % ("https://steemit.com/@%s/%s" % (r['author'], r['permlink']), r['title']), r['timestamp'], "<a href='https://steemit.com/@%s' target='_blank'>%s</a>" % (r['voter'],r['voter']), "<a href='https://steemit.com/@%s' target='_blank'>%s</a>" % (r['author'],r['author']), int(r['weight'])/100],R['_default'].values()))}
             return json.dumps(output), 200, {"Content-Type": "application/json"}
         
     kyk.run()
