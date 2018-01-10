@@ -15,7 +15,7 @@ from tinydb import TinyDB, Query
 db = TinyDB('db.json')
 #%% config
 b = 18850709
-U = ['leesunmoo','jsg','ioc','sonamoo','kakaotalk','skt','krexchange','holic7', 'corn113']
+U = ['leesunmoo','jsg','ioc','sonamoo','kakaotalk','skt','krexchange','holic7', 'corn113', 'kwak']
 #%% block num json
 
 def BlockNumSave(L):
